@@ -1,0 +1,231 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: antiquewhite;
+    font-family: 'Montserrat', sans-serif;
+    overflow-y: hidden;
+}
+
+#navbar {
+    background: rgb(41, 11, 41);
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;  
+    z-index: 99;
+}
+
+.nav-link {
+    align-items: center;
+    color: white;
+    display: flex;
+    font-weight: bold;
+    height: 80px;
+    justify-content: center;
+    padding: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav-link:hover {
+    color: violet;
+}
+
+#welcome-section {
+    align-items: center;
+    background: linear-gradient(to right bottom, rgb(112, 26, 99),rgb(36, 133, 117));
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100vh;
+    justify-content: center;
+}
+
+#profile-pic {
+    border-radius: 100%;
+    max-height: 200px;
+    max-width: 200px; 
+}
+
+#projects {
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-y: overlay;
+    scroll-snap-type: y mandatory;
+}
+
+#projects::-webkit-scrollbar {
+    width: 7px;
+}
+
+#projects::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255);
+}
+
+.project-tile {
+    height: 100vh;
+    scroll-snap-align: center;
+}
+
+.card-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(5px);
+}
+
+.project-card {
+    align-items: center;
+    color: white;
+    display: flex;
+    gap: 20px;
+}
+
+.project-preview {
+    border: solid white 2px;
+    border-radius: 10px;
+    height: auto;
+    width: 100%;
+}
+
+.project-info {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.visit-link {
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    text-decoration: none;
+    width: 100px;
+}
+
+.visit-link:hover {
+    animation-name: change-color;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes change-color {
+    100% {
+        background-color: white;
+        color: black;
+    }
+}
+
+#project1-background {
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+    url(https://i.postimg.cc/LXGjw1Sr/project1-background.png) center no-repeat;
+    background-size: cover;
+}
+
+#project2-background {
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(https://i.postimg.cc/pXbDBzqj/project2-background.png) center no-repeat;
+    background-size: cover;
+}
+
+#project3-background {
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+    url(https://i.postimg.cc/D0s1Twym/project3-background.png) center no-repeat;
+    background-size: cover;
+}
+
+#project4-background {
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+    url(https://i.postimg.cc/V6JjKFxq/project4-background.png) center no-repeat;
+    background-size: cover;
+}
+
+#contact {
+    align-items: center;
+    background: linear-gradient(to right bottom,  rgb(36, 133, 117),rgb(112, 26, 99));
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100vh;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+}
+
+#contact-link-container {
+    display: flex;
+    gap: 20px;
+    
+}
+
+.contact-link {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    color: violet;
+}
+
+#footer {
+    align-items: center;
+    background: rgba(0, 0, 0, 0.466);
+    bottom: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1000px;
+    padding: 20px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .project-card {
+        flex-direction: column;
+    }
+    .project-info {
+        align-items: center;
+        text-align: center;
+    }
+    
+}
+
+@media (max-width: 500px) {
+    #contact-link-container {
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 414px) {
+    #navbar {
+        flex-direction: column;
+    }
+
+    .nav-link {
+        height: 50px;
+    }
+}
